@@ -1,1 +1,1 @@
-# Js_Quiz
+# JS-Quiz
