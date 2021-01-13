@@ -11,7 +11,7 @@
     width: 60%;
 
 }
-.first-question {
+.question {
     font-size: 25px;
 }
 
@@ -24,4 +24,7 @@
 .btn {
     background-color: green;
     color: white;
+    width: 120px;
+    position: center;
+    margin: 5px;
 }
