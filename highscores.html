@@ -3,9 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="quiz.css">
+
     <title>Highscores</title>
 </head>
 <body>
+    <div class="container">
+        
+    <h1>All Done!</h1>
+    <div>Your final score was:<span class="finalScore"></span></div>
+
+    <div><span class="finalScore"></span></div> 
+
+    <div class="row">
+        <div class="col-sm-5">
+   <form class="form">
+    <div class="input-group">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" placeholder="Enter your name"/>
+      </div>
+      <button id="submit-button">Submit</button>
+   </form>
+</div>
+</div>
+
+   <h2>Highscores</h2>
+   <ul id='score-list'></ul>
+
+   </div>
+
+   <script type="text/javascript">
+
+   // Add Event Listener to the submit button
+
+       var submitButton = document.querySelector('#submit-button')
+       var nameInput =  document.querySelector('#name')
+       var scoreDispl = document.querySelector(".scoreDispl")
+
+
+       
+
+       submitButton.addEventListener('click',function(event){
+           event.preventDefault();
+
+           var userInput = nameInput.value.trim();
+           console.log(userInput)
+
+    // Validate the user input is not empty
+    if (userInput === ""){
+        alert('the name field cannot be blank');
+    }
+    else{
+    // Add the last score to the list 
+    console.log(localStorage)
+    var lastUser = localStorage.getItem("name", "userInput")
+    console.log(lastUser)
+
+    var scoreList = document.querySelector("#score-list");
+    scoreList.innerHTML=""
     
+    var users=[];
+    for (let i = 0; i < users.length; i++) {
+        var user= users[i];
+        
+        var li =document.createElement('li');
+        li.textContent=user;
+        li.setAttribute("data-index, i")
+        li.appendChild()
+        
+        scoreList.appendChild(li)
+    }
+
+
+
+
+
+
+    
+
+        
+    
+
+    
+
+    
+
+        
+    }
+   
+
+       })
+
+   
+
+
+
+
+
+
+
+
+   </script>
+   
 </body>
 </html>
